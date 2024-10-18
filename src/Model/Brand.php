@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Loevgaard\SyliusBrandPlugin\Model;
 
+use JMS\Serializer\Annotation as Serializer;
+
 class Brand implements BrandInterface
 {
     use ProductsAwareTrait {
@@ -13,13 +15,22 @@ class Brand implements BrandInterface
         ImagesAwareTrait::__construct as private __imagesAwareTraitConstruct;
     }
 
-    /** @var int */
+    /** 
+     * @var int
+     * @Serializer\Groups({"Autocomplete"})
+     */
     protected $id;
 
-    /** @var string|null */
+    /** 
+     * @var string|null
+     * @Serializer\Groups({"Autocomplete"})
+     */
     protected $code;
 
-    /** @var string|null */
+    /**
+     * @var string|null
+     * @Serializer\Groups({"Autocomplete"})
+     */
     protected $name;
 
     public function __construct()
