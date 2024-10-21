@@ -23,7 +23,7 @@
         </service>
 
         <service id="loevgaard_sylius_brand.form.extension.type.api_product"
-                 class="Loevgaard\SyliusBrandPlugin\Form\Extension\Api\ProductTypeExtension">
+                 class="Loevgaard\SyliusBrandPlugin\Form\Extension\ProductTypeExtension">
             <argument>%loevgaard_sylius_brand.model.brand.class%</argument>
 
             <tag name="form.type_extension"/>
